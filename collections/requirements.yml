@@ -1,6 +1,6 @@
 ---
 
 collections:
-  - ansible.common
+  - ansible.netcommon
   - cisco.ios
   
