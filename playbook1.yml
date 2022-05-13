@@ -1,3 +1,4 @@
+--- 
 - name: Tower test playbook
   hosts: cisco_devices
   gather_facts: false
@@ -9,4 +10,5 @@
           - ntp server 99.99.99.99
         register: ntp_output
         debug:
-          msg: ' {{ ntp_output }}'
+          msg: "{{ ntp_output }}"
+ 
