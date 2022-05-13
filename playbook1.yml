@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 ---
-
-=======
---- 
->>>>>>> d5368e4493c4ae298c59cd1b2df50c2e0fcaa2da
 - name: Tower test playbook
   hosts: cisco_devices
   gather_facts: false
@@ -15,10 +10,5 @@
           - ntp server 99.99.99.99
         register: ntp_output
         debug:
-<<<<<<< HEAD
-          msg: ' {{ ntp_output }}'
-...
-=======
           msg: "{{ ntp_output }}"
- 
->>>>>>> d5368e4493c4ae298c59cd1b2df50c2e0fcaa2da
+... 
