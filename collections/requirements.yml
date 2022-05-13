@@ -3,5 +3,4 @@
 collections:
   - ansible.netcommon
   - cisco.ios
-  - cisco.ios.ios_config
   
