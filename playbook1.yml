@@ -1,14 +1,12 @@
----
-  - name: "Tower test playbook"
-      hosts: cisco_devices
-      gather_facts: false
-      connection: network_cli
-    
+- name: Tower test playbook
+  hosts: cisco_devices
+  gather_facts: false
+  connection: network_cli
   tasks:
-    - name: "NTP Configuration"
+    - name: NTP Configuration
       cisco.ios.ios_config:
         lines:
           - ntp server 99.99.99.99
-          register: ntp_output
-          debug:
-            msg: " {{ ntp_output }}"
+        register: ntp_output
+        debug:
+          msg: ' {{ ntp_output }}'
