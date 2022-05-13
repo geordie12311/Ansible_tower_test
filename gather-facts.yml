@@ -3,7 +3,7 @@
 --- 
 
 - name: gather information from ios devices
-  hosts: all
+  hosts: R1
   gather_facts: false
   connection: network_cli
 
