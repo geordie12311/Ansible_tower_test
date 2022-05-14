@@ -1,7 +1,7 @@
 ---
 
 - name: Tower test playbook
-  hosts: R1
+  hosts: cisco_ios
   gather_facts: false
   connection: network_cli
   tasks:
