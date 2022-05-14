@@ -3,4 +3,7 @@
 collections:
   - ansible.netcommon
   - cisco.ios
+  - cisco.iosxr
+  - arista.eos
+  - vyos.vyos
   
