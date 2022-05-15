@@ -1,0 +1,20 @@
+---
+
+- name: "Playbook to Validate VLANs on Devices"
+  hosts: Canada, vEOS
+  connection: network_cli
+
+  tasks:
+    - name: "Use NAPALM to Validate VLANs"
+      napalm_validate:
+        hostname: "{{ inventory_hostname }}"
+        username: "{{ ansible_user }}"
+        password: "{{ ansible_password }}"
+        dev_os: "{{ napalm_platform }}"
+        validation_file: "{{ inventory_hostname }}-vlans.yml"
+      register: result
+      ignore_errors: yes
+
+    - name: "Print the result"
+      debug:
+        msg: "{{ result }}"

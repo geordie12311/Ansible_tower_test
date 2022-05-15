@@ -1,0 +1,20 @@
+---
+- name: "Playbook to retrive facts from devices using Napalm-Ansible"
+  hosts: Canada, Arista
+  connection: network_cli
+
+  tasks:
+    - name: "Retrieve device facts from via NAPALM"
+      napalm_get_facts:
+        hostname: "{{ inventory_hostname }}"
+        username: "{{ ansible_user }}"
+        password: "{{ ansible_password }}"
+        dev_os: "{{ napalm_platform }}"
+        filter: ["vlans"]
+      register: result
+
+    - name: "Print Result"
+      debug:
+        msg: "{{ result.ansible_facts.napalm_vlans }}"
+# filtering the results down to specific information
+...
